@@ -1,0 +1,31 @@
+<html>
+
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+
+<body>
+<audio controls>
+    <source src="Leap Of Faith count.wav" type="audio/wav">
+</audio>
+</body>
+
+<script>
+var HiHat = new Audio('HiHat.wav');
+var Cl = new Audio('Cl.wav');
+
+metronome();
+function metronome() {
+    setInterval(HiHatFunc, 2000);
+    setInterval(ClFunc, 500 );
+}
+
+function HiHatFunc() {
+   HiHat.play(); 
+   HiHat.play();
+}
+
+function ClFunc() {
+   Cl.play();
+}
+
+</script>
+</html>
